@@ -7,7 +7,7 @@ ENV BRANCH=master \
 
 RUN mkdir /tmp/build && \
     cd /tmp/build && \
-    wget -O src.zip https://github.com/opentripplanner/OpenTripPlanner/archive/$BRANCH.zip && \
+    wget -O src.zip --progress dot:mega https://github.com/opentripplanner/OpenTripPlanner/archive/$BRANCH.zip && \
     unzip src.zip && \
     cd OpenTripPlanner-$BRANCH && \
     mvn package -DskipTests && \
